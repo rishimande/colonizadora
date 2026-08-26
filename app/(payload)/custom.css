@@ -1,0 +1,8 @@
+:root {
+  --theme-success-500: #43b7ae;
+}
+
+.template-default__wrap {
+  --style-radius-s: 4px;
+  --style-radius-m: 8px;
+}
