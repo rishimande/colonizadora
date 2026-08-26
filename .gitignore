@@ -42,3 +42,6 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+
+# payload admin import map
+app/(payload)/admin/importMap.js
