@@ -572,6 +572,8 @@ button {
 .story-media {
   position: relative;
   min-height: 640px;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   background: var(--forest);
 }
@@ -582,14 +584,61 @@ button {
   background: linear-gradient(90deg, rgba(8, 31, 27, 0.25), transparent 45%);
   content: "";
   pointer-events: none;
+  z-index: 1;
 }
 
-.story-media video {
+.story-media video,
+.story-poster-wrapper,
+.story-video-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.story-media video,
+.story-poster-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
+
+.story-poster-wrapper {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 200ms ease;
+}
+
+.story-poster-wrapper:hover .story-poster-img {
+  transform: scale(1.02);
+}
+
+.story-poster-img {
+  transition: transform 400ms ease;
+}
+
+.story-video-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.story-video-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  border: 0;
+}
+
+
 
 .conversion {
   position: relative;

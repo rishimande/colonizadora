@@ -38,7 +38,7 @@ export const siteContent = {
     title: "Assista ao vídeo",
     body: "Conheça nossa história, nossos projetos e o impacto que geramos todos os dias.",
     poster: "/assets/video-poster.webp",
-    url: "https://videos.pexels.com/video-files/38677971/16429078_1080_1920_30fps.mp4",
+    url: "https://www.youtube.com/watch?v=1Oo-VIN0UaY",
   },
   cta: {
     title: "Aqui você encontra os melhores projetos e as melhores condições.",
