@@ -161,16 +161,16 @@ button {
   top: 34px;
   right: 0;
   display: flex;
-  min-width: 302px;
-  height: 70px;
+  min-width: 236px;
+  height: 66px;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 0 34px;
+  gap: 10px;
+  padding: 0 26px 0 20px;
   background: var(--lime);
-  border-radius: 36px 0 0 36px;
+  border-radius: 33px 0 0 33px;
   color: #26342d;
-  font-size: 1.14rem;
+  font-size: 1.1rem;
   font-weight: 700;
   transition: background 180ms ease, transform 180ms ease;
 }
@@ -843,7 +843,7 @@ button {
     position: absolute;
     z-index: 32;
     top: 36px;
-    right: 316px;
+    right: 250px;
     display: grid;
     width: 50px;
     height: 50px;
