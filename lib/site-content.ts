@@ -3,6 +3,7 @@ export type ProjectCard = {
   summary: string;
   image: string;
   accent: "lime" | "teal";
+  href?: string;
 };
 
 export const siteContent = {
@@ -25,18 +26,21 @@ export const siteContent = {
       summary: "Alguns lugares são feitos para morar. Outros, para marcar presença.",
       image: "/assets/arboreto.webp",
       accent: "lime",
+      href: "https://colonizadorafeliz.com.br/arboreto-one-page/",
     },
     {
       title: "Lucca Residencial",
       summary: "O seu apartamento ideal, pronto para morar.",
       image: "/assets/lucca.webp",
       accent: "teal",
+      href: "https://colonizadorafeliz.com.br/LUCCA-one-page/",
     },
     {
       title: "Claudino Francio",
       summary: "Loteamento comercial e industrial. O endereço certo para seu negócio.",
-      image: "/assets/claudino.webp",
+      image: "/assets/newClaudinoFrancio.jpeg",
       accent: "lime",
+      href: "https://colonizadorafeliz.com.br/claudino-one-page/",
     },
   ] satisfies ProjectCard[],
   video: {

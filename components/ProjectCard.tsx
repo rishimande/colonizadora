@@ -4,6 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 import type { ProjectCard as ProjectCardData } from "@/lib/site-content";
 
 export function ProjectCard({ project, index }: { project: ProjectCardData; index: number }) {
+  const isExternal = Boolean(project.href?.startsWith("http"));
+
   return (
     <article className={`project-card accent-${project.accent}`}>
       <div className="project-image">
@@ -19,7 +21,11 @@ export function ProjectCard({ project, index }: { project: ProjectCardData; inde
       <div className="project-body">
         <h3>{project.title}</h3>
         <p>{project.summary}</p>
-        <Link href="#contato" aria-label={`Saiba mais sobre ${project.title}`}>
+        <Link
+          href={project.href || "#contato"}
+          aria-label={`Saiba mais sobre ${project.title}`}
+          {...(isExternal ? { target: "_blank", rel: "noreferrer" } : {})}
+        >
           Saiba mais <ArrowUpRight aria-hidden="true" />
         </Link>
       </div>
