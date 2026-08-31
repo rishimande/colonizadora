@@ -19,7 +19,6 @@ export default function HomePage() {
         <div className="hero-glow" aria-hidden="true" />
         <div className="hero-content shell">
           <div className="hero-heading">
-            <p className="eyebrow eyebrow-light">Sorriso · Mato Grosso</p>
             <h1 id="hero-title">{siteContent.hero.title}</h1>
             <span className="title-rule" aria-hidden="true" />
             <p className="hero-lead">{siteContent.hero.lead}</p>
