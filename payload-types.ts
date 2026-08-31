@@ -573,7 +573,7 @@ export interface SiteSetting {
   openingHours?: string | null;
   social?: {
     facebook?: string | null;
-    linkedin?: string | null;
+    youtube?: string | null;
     instagram?: string | null;
   };
   updatedAt?: string | null;
@@ -612,7 +612,7 @@ export interface SiteSettingsSelect<T extends boolean = true> {
     | T
     | {
         facebook?: T;
-        linkedin?: T;
+        youtube?: T;
         instagram?: T;
       };
   updatedAt?: T;

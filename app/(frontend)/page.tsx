@@ -85,9 +85,15 @@ export default function HomePage() {
           <div className="footer-social">
             <small>Siga-nos nas redes sociais</small>
             <div>
-              <Link href="#" aria-label="Facebook"><span aria-hidden="true">f</span></Link>
-              <Link href="#" aria-label="LinkedIn"><span aria-hidden="true">in</span></Link>
-              <Link href="#" aria-label="Instagram"><span aria-hidden="true">ig</span></Link>
+              <Link href={siteContent.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook">
+                <span aria-hidden="true">f</span>
+              </Link>
+              <Link href={siteContent.social.youtube} target="_blank" rel="noreferrer" aria-label="YouTube">
+                <span aria-hidden="true">yt</span>
+              </Link>
+              <Link href={siteContent.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
+                <span aria-hidden="true">ig</span>
+              </Link>
             </div>
           </div>
 

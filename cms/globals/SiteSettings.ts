@@ -13,7 +13,7 @@ export const SiteSettings: GlobalConfig = {
       type: "group",
       fields: [
         { name: "facebook", type: "text" },
-        { name: "linkedin", type: "text" },
+        { name: "youtube", type: "text" },
         { name: "instagram", type: "text" },
       ],
     },

@@ -8,6 +8,11 @@ export type ProjectCard = {
 export const siteContent = {
   phone: "(66) 3545-6500",
   whatsappURL: "https://wa.me/556635456500",
+  social: {
+    facebook: "https://www.facebook.com/ColonizadoraFeliz",
+    youtube: "https://www.youtube.com/@colonizadorafeliz6349",
+    instagram: "https://instagram.com/colinizadorafeliz/",
+  },
   hero: {
     title: "Bem-vindo(a)!",
     lead: "Se você busca as melhores opções para construir, morar ou investir, encontrou o lugar certo.",
