@@ -5,6 +5,7 @@ import {
   Clock3,
   MessageCircle,
 } from "lucide-react";
+import { SiFacebook, SiInstagram, SiYoutube } from "react-icons/si";
 
 import { Header } from "@/components/Header";
 import { ProjectCard } from "@/components/ProjectCard";
@@ -84,14 +85,29 @@ export default function HomePage() {
           <div className="footer-social">
             <small>Siga-nos nas redes sociais</small>
             <div>
-              <Link href={siteContent.social.facebook} target="_blank" rel="noreferrer" aria-label="Facebook">
-                <span aria-hidden="true">f</span>
+              <Link
+                href={siteContent.social.facebook}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+              >
+                <SiFacebook aria-hidden="true" />
               </Link>
-              <Link href={siteContent.social.youtube} target="_blank" rel="noreferrer" aria-label="YouTube">
-                <span aria-hidden="true">yt</span>
+              <Link
+                href={siteContent.social.youtube}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="YouTube"
+              >
+                <SiYoutube aria-hidden="true" />
               </Link>
-              <Link href={siteContent.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
-                <span aria-hidden="true">ig</span>
+              <Link
+                href={siteContent.social.instagram}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
+                <SiInstagram aria-hidden="true" />
               </Link>
             </div>
           </div>

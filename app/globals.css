@@ -774,13 +774,8 @@ button {
 
 .footer-social svg {
   width: 19px;
-}
-
-.footer-social a span {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  text-transform: lowercase;
+  height: 19px;
+  fill: currentColor;
 }
 
 .footer-hours {
