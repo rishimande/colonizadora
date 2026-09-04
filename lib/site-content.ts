@@ -18,13 +18,13 @@ export const siteContent = {
     title: "Bem-vindo(a)!",
     lead: "Se você busca as melhores opções para construir, morar ou investir, encontrou o lugar certo.",
     story:
-      "Há mais de 40 anos, a Colonizadora Feliz tem um papel central na história de Sorriso-MT. Um legado de inovação, qualidade e bem-estar construído em cada projeto e em cada história da qual fazemos parte. Já fizemos muito — e vamos fazer muito mais. Com você e por você.",
+      "Há 44 anos, a Colonizadora Feliz tem um papel central na história de Sorriso-MT. Um legado de inovação, qualidade e bem-estar construído em cada projeto e em cada história da qual fazemos parte. Já fizemos muito — e vamos fazer muito mais. Com você e por você.",
   },
   projects: [
     {
       title: "Arboreto Ecoville",
       summary: "Alguns lugares são feitos para morar. Outros, para marcar presença.",
-      image: "/assets/arboreto.webp",
+      image: "/assets/newArboreto.webp",
       accent: "lime",
       href: "https://colonizadorafeliz.com.br/arboreto-one-page/",
     },

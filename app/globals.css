@@ -657,7 +657,12 @@ button {
 .conversion-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(5, 28, 23, 0.94) 0%, rgba(5, 28, 23, 0.74) 42%, rgba(5, 28, 23, 0.12) 82%);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 28, 23, 0.62) 0%,
+    rgba(5, 28, 23, 0.35) 45%,
+    rgba(5, 28, 23, 0.04) 80%
+  );
 }
 
 .conversion-content {
@@ -674,6 +679,7 @@ button {
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .conversion-content a {
@@ -1214,7 +1220,7 @@ button {
   }
 
   .conversion-overlay {
-    background: linear-gradient(180deg, rgba(5, 28, 23, 0.34), rgba(5, 28, 23, 0.94));
+    background: linear-gradient(180deg, rgba(5, 28, 23, 0.15) 0%, rgba(5, 28, 23, 0.68) 100%);
   }
 
   .conversion-content {

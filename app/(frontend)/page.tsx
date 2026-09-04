@@ -60,7 +60,7 @@ export default function HomePage() {
 
       <section className="conversion shell" aria-labelledby="conversion-title">
         <Image
-          src="/assets/aerial.webp"
+          src="/assets/newAerial.webp"
           alt="Vista aérea demonstrativa de um loteamento em Sorriso"
           fill
           sizes="(max-width: 760px) 92vw, 88vw"
