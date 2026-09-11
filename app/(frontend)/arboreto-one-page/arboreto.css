@@ -1,0 +1,1084 @@
+/* Arboreto Eco Ville - Dedicated Standalone Landing Page Styles */
+
+:root {
+  --arb-bronze-primary: #685034;
+  --arb-bronze-dark: #503d27;
+  --arb-bronze-deep: #372a17;
+  --arb-bronze-charcoal: #231b10;
+  --arb-gold: #b4a06d;
+  --arb-gold-light: #d8caaa;
+  --arb-gold-dark: #8c7647;
+  --arb-sand: #f5f1ea;
+  --arb-sand-light: #faf8f5;
+  --arb-text-dark: #372a17;
+  --arb-text-muted: #746351;
+  --arb-text-light: #dfd7ce;
+  --arb-white: #ffffff;
+}
+
+.arboreto-page {
+  background-color: var(--arb-sand-light);
+  color: var(--arb-text-dark);
+  font-family: var(--font-barlow, "Barlow", sans-serif);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.arboreto-container {
+  width: min(1280px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .arboreto-container {
+    width: calc(100% - 32px);
+  }
+}
+
+/* 1. TOP BANNER */
+.arboreto-topbar {
+  background-color: var(--arb-bronze-primary);
+  color: var(--arb-white);
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.arboreto-topbar a {
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.arboreto-topbar a:hover {
+  opacity: 0.85;
+}
+
+/* 2. HERO SECTION */
+.arboreto-hero {
+  position: relative;
+  min-height: 920px;
+  background-color: var(--arb-bronze-deep);
+  background-image: url("/arboreto/hero_bg_clean.jpg");
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: center;
+  padding: 80px 0 100px;
+}
+
+@media (max-width: 1024px) {
+  .arboreto-hero {
+    min-height: auto;
+    padding: 60px 0 80px;
+  }
+}
+
+.arboreto-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 42, 23, 0.2) 0%,
+    rgba(35, 27, 16, 0.55) 60%,
+    rgba(25, 19, 11, 0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.arboreto-hero-content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .arboreto-hero-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.arboreto-hero-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .arboreto-hero-brand {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.arboreto-hero-logo {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 36px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+}
+
+.arboreto-hero-tagline {
+  color: var(--arb-white);
+  font-size: clamp(1.2rem, 2.2vw, 1.85rem);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.45;
+  max-width: 600px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.arboreto-hero-tagline strong {
+  font-weight: 800;
+}
+
+/* 3. LEAD FORM COMPONENT */
+.arboreto-form-card {
+  background: rgba(91, 75, 60, 0.94);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(180, 160, 109, 0.25);
+  border-radius: 4px;
+  padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  width: 100%;
+  max-width: 440px;
+  margin-inline: auto;
+}
+
+.arboreto-form-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.arboreto-form-title {
+  color: var(--arb-white);
+  font-size: 0.96rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.arboreto-form-group {
+  margin-bottom: 18px;
+}
+
+.arboreto-form-label {
+  display: block;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--arb-white);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.arboreto-form-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  padding: 8px 0;
+  font-size: 0.94rem;
+  color: var(--arb-white);
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+  border-radius: 0;
+}
+
+.arboreto-form-input::placeholder {
+  color: rgba(223, 215, 206, 0.65);
+  font-size: 0.88rem;
+  font-weight: 300;
+}
+
+.arboreto-form-input:focus {
+  border-bottom-color: var(--arb-gold);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.arboreto-form-submit {
+  width: 100%;
+  background-color: var(--arb-white);
+  color: var(--arb-bronze-deep);
+  border: none;
+  padding: 14px 20px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 14px;
+  margin-bottom: 18px;
+  transition: all 0.2s ease-in-out;
+}
+
+.arboreto-form-submit:hover:not(:disabled) {
+  background-color: var(--arb-sand-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.arboreto-form-checkbox-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.arboreto-form-checkbox {
+  margin-top: 3px;
+  accent-color: var(--arb-gold);
+  cursor: pointer;
+}
+
+.arboreto-form-checkbox-label {
+  font-size: 0.64rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+.arboreto-form-error {
+  background: rgba(185, 28, 28, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.arboreto-form-success {
+  background: rgba(91, 75, 60, 0.95);
+  border: 1px solid var(--arb-gold);
+  border-radius: 4px;
+  padding: 40px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arboreto-form-btn-secondary {
+  background: transparent;
+  color: var(--arb-gold-light);
+  border: 1px solid var(--arb-gold);
+  padding: 10px 18px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.arboreto-form-btn-secondary:hover {
+  background: rgba(180, 160, 109, 0.15);
+  color: #fff;
+}
+
+/* 4. VIDEO SECTION */
+.arboreto-video-section {
+  padding: 70px 0 80px;
+  background-color: var(--arb-white);
+  position: relative;
+  background-image: radial-gradient(circle at center, rgba(180, 160, 109, 0.05) 0%, transparent 70%);
+}
+
+.arboreto-video-card {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  aspect-ratio: 16 / 9;
+  min-height: 240px;
+  margin-inline: auto;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(55, 42, 23, 0.18);
+  background-color: var(--arb-bronze-deep);
+}
+
+.arboreto-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+
+.arboreto-video-card:hover .arboreto-video-overlay {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.arboreto-video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* 5. CONCEPT & ARCHITECTURE SECTION */
+.arboreto-concept-section {
+  position: relative;
+  min-height: 720px;
+  background-image: url("/arboreto/concept_bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 0 40px;
+  color: var(--arb-white);
+}
+
+.arboreto-concept-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(30, 20, 10, 0.4) 0%,
+    rgba(30, 20, 10, 0.05) 35%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+.arboreto-concept-header {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto 1.3fr;
+  gap: 36px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .arboreto-concept-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.arboreto-concept-title {
+  font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.arboreto-concept-divider {
+  width: 2px;
+  height: 110px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 900px) {
+  .arboreto-concept-divider {
+    display: none;
+  }
+}
+
+.arboreto-concept-body {
+  font-size: clamp(0.92rem, 1.2vw, 1.08rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+}
+
+.arboreto-concept-footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  font-size: 0.84rem;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  margin-top: 120px;
+}
+
+/* 6. NUMBERS / METRICS SECTION */
+.arboreto-numbers-section {
+  padding: 80px 0 90px;
+  background-color: var(--arb-white);
+  text-align: center;
+}
+
+.arboreto-section-title {
+  color: var(--arb-bronze-primary);
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.arboreto-title-line {
+  width: 140px;
+  height: 3px;
+  background-color: var(--arb-bronze-primary);
+  margin: 0 auto 50px;
+}
+
+.arboreto-numbers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.arboreto-number-stripe {
+  background-color: var(--arb-gold);
+  color: var(--arb-white);
+  padding: 22px 24px;
+  border-radius: 3px;
+  font-size: clamp(1.05rem, 2vw, 1.6rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(104, 80, 52, 0.12);
+  transition: transform 0.2s;
+}
+
+.arboreto-number-stripe:hover {
+  transform: scale(1.008);
+}
+
+.arboreto-number-stripe strong {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+  padding-bottom: 2px;
+  margin-right: 8px;
+  font-weight: 800;
+}
+
+/* 7. CTA LOTS MAP RIBBON */
+.arboreto-cta-ribbon-section {
+  background: linear-gradient(90deg, #6e593c 0%, #7d6545 50%, #6e593c 100%);
+  border-top: 1px solid rgba(180, 160, 109, 0.3);
+  border-bottom: 1px solid rgba(180, 160, 109, 0.3);
+}
+
+.arboreto-cta-ribbon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 28px 16px;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.arboreto-cta-ribbon:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.arboreto-cta-ribbon-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.arboreto-cta-ribbon-text {
+  color: var(--arb-white);
+  font-size: clamp(1.1rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.25;
+}
+
+/* 8. INFRASTRUCTURE & GALLERY SECTION */
+.arboreto-infra-section {
+  padding: 90px 0 100px;
+  background-color: var(--arb-white);
+  text-align: center;
+}
+
+.arboreto-infra-intro {
+  max-width: 960px;
+  margin: 28px auto 48px;
+  color: var(--arb-text-muted);
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.arboreto-gallery-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.arboreto-gallery-viewport {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: clamp(320px, 45vw, 560px);
+  overflow: hidden;
+}
+
+.arboreto-gallery-side-slide {
+  position: relative;
+  width: 22%;
+  height: 75%;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+@media (max-width: 768px) {
+  .arboreto-gallery-side-slide {
+    display: none;
+  }
+}
+
+.arboreto-gallery-side-slide:hover {
+  opacity: 0.85;
+}
+
+.arboreto-gallery-side-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(55, 42, 23, 0.4);
+}
+
+.arboreto-gallery-active-slide {
+  position: relative;
+  width: min(870px, 94%);
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(55, 42, 23, 0.22);
+}
+
+.arboreto-gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--arb-bronze-primary);
+  border: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transition: all 0.2s;
+}
+
+.arboreto-gallery-nav-btn.prev {
+  left: clamp(10px, 12%, 180px);
+}
+
+.arboreto-gallery-nav-btn.next {
+  right: clamp(10px, 12%, 180px);
+}
+
+@media (max-width: 768px) {
+  .arboreto-gallery-nav-btn.prev {
+    left: 10px;
+  }
+  .arboreto-gallery-nav-btn.next {
+    right: 10px;
+  }
+}
+
+.arboreto-gallery-nav-btn:hover {
+  background: var(--arb-white);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.arboreto-gallery-zoom-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.arboreto-gallery-zoom-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.arboreto-gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.arboreto-gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d6cbbe;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.arboreto-gallery-dot.active {
+  background-color: var(--arb-bronze-primary);
+  transform: scale(1.3);
+}
+
+.arboreto-gallery-credit {
+  margin-top: 28px;
+  font-size: 0.84rem;
+  letter-spacing: 0.12em;
+  color: var(--arb-text-muted);
+  text-transform: uppercase;
+}
+
+/* 9. NATURE RIBBON */
+.arboreto-nature-ribbon {
+  background: linear-gradient(90deg, #745526 0%, #83612d 50%, #745526 100%);
+  color: var(--arb-white);
+  padding: 38px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.arboreto-nature-content {
+  display: grid;
+  grid-template-columns: 360px auto 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .arboreto-nature-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    text-align: center;
+  }
+}
+
+.arboreto-nature-title {
+  font-size: clamp(1.3rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.arboreto-nature-divider {
+  width: 2px;
+  height: 90px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 900px) {
+  .arboreto-nature-divider {
+    display: none;
+  }
+}
+
+.arboreto-nature-body {
+  font-size: clamp(0.88rem, 1.1vw, 0.98rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 300;
+}
+
+/* 10. FICHA TÉCNICA */
+.arboreto-specs-section {
+  position: relative;
+  padding: 90px 0 110px;
+  background-color: var(--arb-bronze-deep);
+  background-image: url("/arboreto/specs_bg_clean.jpg");
+  background-size: cover;
+  background-position: center top;
+  color: var(--arb-white);
+}
+
+.arboreto-specs-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(55, 42, 23, 0.75) 0%,
+    rgba(40, 30, 16, 0.92) 50%,
+    rgba(25, 18, 10, 0.98) 100%
+  );
+  pointer-events: none;
+}
+
+.arboreto-specs-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.arboreto-specs-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--arb-white);
+  margin-bottom: 12px;
+}
+
+.arboreto-specs-line {
+  width: 140px;
+  height: 3px;
+  background-color: var(--arb-white);
+  margin: 0 auto;
+}
+
+.arboreto-specs-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+}
+
+@media (max-width: 1024px) {
+  .arboreto-specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .arboreto-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.arboreto-spec-col-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--arb-gold-light);
+  border-bottom: 1px solid rgba(216, 202, 170, 0.4);
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
+.arboreto-spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.arboreto-spec-list li {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+  position: relative;
+  padding-left: 14px;
+}
+
+.arboreto-spec-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--arb-gold);
+}
+
+/* 11. LOCATION SECTION */
+.arboreto-location-section {
+  padding: 90px 0 100px;
+  background-color: var(--arb-white);
+  text-align: center;
+}
+
+.arboreto-location-intro {
+  max-width: 900px;
+  margin: 20px auto 44px;
+  font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+  line-height: 1.7;
+  color: var(--arb-text-muted);
+  font-weight: 300;
+}
+
+.arboreto-map-card {
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(55, 42, 23, 0.15);
+  border: 1px solid #e5dcce;
+}
+
+/* 12. BOTTOM CONVERSION & FOOTER */
+.arboreto-bottom-section {
+  position: relative;
+  min-height: 860px;
+  background-color: var(--arb-bronze-deep);
+  background-image: url("/arboreto/cta_bottom_clean.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  align-items: center;
+  padding: 90px 0 120px;
+}
+
+@media (max-width: 1024px) {
+  .arboreto-bottom-section {
+    min-height: auto;
+    padding: 70px 0 90px;
+  }
+}
+
+.arboreto-bottom-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 27, 16, 0.4) 0%,
+    rgba(25, 19, 11, 0.75) 60%,
+    rgba(15, 11, 6, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+.arboreto-bottom-content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1.2fr 440px;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .arboreto-bottom-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+}
+
+.arboreto-bottom-cta-heading {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--arb-white);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.arboreto-bottom-cta-sub {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  letter-spacing: 0.1em;
+  color: var(--arb-gold-light);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.arboreto-bottom-badge {
+  display: inline-block;
+  border: 1px solid var(--arb-gold);
+  padding: 10px 24px;
+  font-size: 0.88rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--arb-white);
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+
+.arboreto-footer {
+  background-color: #17120a;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* 13. FLOATING WHATSAPP BUTTON */
+.arboreto-floating-whatsapp {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.arboreto-floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+}
+
+/* 14. LIGHTBOX / MODAL SHARED STYLES */
+.arboreto-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: rgba(15, 11, 6, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.arboreto-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+  z-index: 210;
+}
+
+.arboreto-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.arboreto-lightbox-content {
+  position: relative;
+  width: min(1000px, 95vw);
+  background: transparent;
+  text-align: center;
+}
+
+.arboreto-lightbox-caption {
+  color: var(--arb-white);
+  margin-top: 16px;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.arboreto-video-modal-content {
+  width: min(960px, 95vw);
+}
+
+.arboreto-map-modal-card {
+  background: var(--arb-white);
+  border-radius: 8px;
+  width: min(1050px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  animation: scaleUp 0.25s ease-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.arboreto-map-modal-header {
+  padding: 24px 28px;
+  border-bottom: 1px solid #eae3d9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.arboreto-map-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+
+.arboreto-map-whatsapp-btn:hover {
+  background-color: #1eb956;
+}
+
+.arboreto-map-modal-body {
+  padding: 24px 28px;
+}
+
+.arboreto-map-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(35, 27, 16, 0.85);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.arboreto-map-modal-footer {
+  margin-top: 24px;
+}

@@ -26,7 +26,7 @@ export const siteContent = {
       summary: "Alguns lugares são feitos para morar. Outros, para marcar presença.",
       image: "/assets/newArboreto.webp",
       accent: "lime",
-      href: "https://colonizadorafeliz.com.br/arboreto-one-page/",
+      href: "/arboreto-one-page",
     },
     {
       title: "Lucca Residencial",
