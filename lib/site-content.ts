@@ -33,7 +33,7 @@ export const siteContent = {
       summary: "O seu apartamento ideal, pronto para morar.",
       image: "/assets/lucca.webp",
       accent: "teal",
-      href: "https://colonizadorafeliz.com.br/LUCCA-one-page/",
+      href: "/LUCCA-one-page",
     },
     {
       title: "Claudino Francio",

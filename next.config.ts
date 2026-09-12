@@ -27,6 +27,21 @@ const nextConfig: NextConfig = {
         destination: "/claudino-one-page",
         permanent: false,
       },
+      {
+        source: "/lucca",
+        destination: "/LUCCA-one-page",
+        permanent: false,
+      },
+      {
+        source: "/lucca-residencial",
+        destination: "/LUCCA-one-page",
+        permanent: false,
+      },
+      {
+        source: "/residencial-lucca",
+        destination: "/LUCCA-one-page",
+        permanent: false,
+      },
     ];
   },
 };

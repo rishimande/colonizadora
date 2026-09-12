@@ -1,0 +1,1113 @@
+/* Lucca Residencial - Dedicated Standalone Landing Page Styles */
+
+:root {
+  --luc-brown-deep: #1e160e;
+  --luc-brown-dark: #3b2d18;
+  --luc-brown-primary: #644c32;
+  --luc-brown-accent: #725628;
+  --luc-brown-light: #8a6a48;
+  --luc-gold: #bfa175;
+  --luc-gold-light: #e0d0b8;
+  --luc-sand-bg: #fcfaf7;
+  --luc-sand-card: #f5f0e8;
+  --luc-sand-border: #e2d9cd;
+  --luc-text-dark: #372a17;
+  --luc-text-muted: #6e593c;
+  --luc-text-light: #f7f2ea;
+  --luc-white: #ffffff;
+}
+
+.lucca-page {
+  background-color: var(--luc-sand-bg);
+  color: var(--luc-text-dark);
+  font-family: var(--font-barlow, "Barlow", sans-serif);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.lucca-container {
+  width: min(1280px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .lucca-container {
+    width: calc(100% - 32px);
+  }
+}
+
+/* 1. TOP PRIVACY BAR */
+.lucca-topbar {
+  background-color: var(--luc-brown-primary);
+  color: var(--luc-white);
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lucca-topbar a {
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.lucca-topbar a:hover {
+  opacity: 0.85;
+}
+
+/* 2. HERO SECTION */
+.lucca-hero {
+  position: relative;
+  min-height: 880px;
+  background-color: var(--luc-brown-deep);
+  background-image: url("/lucca/hero_bg_clean.jpg");
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: center;
+  padding: 60px 0 90px;
+}
+
+@media (max-width: 1024px) {
+  .lucca-hero {
+    min-height: auto;
+    padding: 50px 0 70px;
+  }
+}
+
+.lucca-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 18, 12, 0.15) 0%,
+    rgba(25, 18, 12, 0.25) 50%,
+    rgba(25, 18, 12, 0.65) 100%
+  );
+  pointer-events: none;
+}
+
+.lucca-hero-content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .lucca-hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.lucca-hero-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+@media (min-width: 1025px) {
+  .lucca-hero-brand {
+    padding-left: 20%;
+  }
+}
+
+.lucca-hero-logo {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.4));
+}
+
+.lucca-hero-headlines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.lucca-hero-title {
+  font-size: clamp(2rem, 3.8vw, 2.9rem);
+  font-weight: 700;
+  color: var(--luc-white);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.lucca-hero-features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--luc-white);
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.lucca-hero-features-divider {
+  width: 2px;
+  height: 28px;
+  background-color: var(--luc-white);
+  opacity: 0.7;
+}
+
+.lucca-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--luc-brown-accent);
+  color: var(--luc-white);
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* LEAD FORM CARD */
+.lucca-form-card {
+  background-color: var(--luc-brown-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 34px 30px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  color: var(--luc-white);
+  backdrop-filter: blur(8px);
+}
+
+.lucca-form-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.lucca-form-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--luc-white);
+}
+
+.lucca-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lucca-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lucca-form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--luc-white);
+  text-transform: uppercase;
+}
+
+.lucca-form-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 8px 0;
+  font-size: 0.95rem;
+  color: var(--luc-white);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.lucca-form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+}
+
+.lucca-form-input:focus {
+  border-bottom-color: var(--luc-white);
+}
+
+.lucca-form-submit {
+  margin-top: 10px;
+  background-color: var(--luc-white);
+  color: var(--luc-brown-primary);
+  border: none;
+  border-radius: 4px;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lucca-form-submit:hover:not(:disabled) {
+  background-color: #fdf8f2;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.lucca-form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.lucca-form-checkbox-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 6px;
+}
+
+.lucca-form-checkbox {
+  margin-top: 3px;
+  width: 14px;
+  height: 14px;
+  accent-color: var(--luc-brown-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.lucca-form-checkbox-label {
+  font-size: 0.68rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.lucca-form-error {
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.lucca-form-success {
+  background-color: var(--luc-brown-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 34px 26px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.lucca-form-btn-secondary {
+  background-color: transparent;
+  color: var(--luc-white);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 10px 18px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.lucca-form-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--luc-white);
+}
+
+/* 3. VIDEO SHOWCASE SECTION */
+.lucca-video-section {
+  padding: 40px 0 60px;
+  background-color: var(--luc-sand-bg);
+}
+
+.lucca-video-card {
+  position: relative;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(59, 45, 24, 0.18);
+  background-color: #000;
+}
+
+.lucca-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  transition: background 0.3s;
+}
+
+.lucca-video-card:hover .lucca-video-overlay {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.lucca-video-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* 4. DIFERENCIAIS SECTION */
+.lucca-diferenciais-section {
+  position: relative;
+  background-color: var(--luc-brown-deep);
+  color: var(--luc-white);
+  padding: 80px 0 90px;
+}
+
+.lucca-section-header-center {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.lucca-section-title {
+  font-size: clamp(2rem, 3.4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--luc-white);
+  line-height: 1.2;
+}
+
+.lucca-section-title.dark {
+  color: var(--luc-brown-dark);
+}
+
+.lucca-title-line {
+  width: 160px;
+  height: 2px;
+  background-color: var(--luc-gold);
+  margin: 16px auto 0;
+}
+
+.lucca-title-line.dark {
+  background-color: var(--luc-brown-accent);
+}
+
+.lucca-diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 960px) {
+  .lucca-diferenciais-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.lucca-diferencial-card {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px 36px;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .lucca-diferencial-card {
+    min-height: 480px;
+    padding: 40px 24px;
+    border-radius: 8px;
+  }
+}
+
+.lucca-diferencial-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.lucca-diferencial-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 18, 12, 0.85) 0%,
+    rgba(25, 18, 12, 0.6) 50%,
+    rgba(25, 18, 12, 0.8) 100%
+  );
+}
+
+.lucca-diferencial-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lucca-diferencial-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--luc-white);
+  margin-bottom: 8px;
+}
+
+.lucca-diferencial-divider {
+  width: 45px;
+  height: 2px;
+  background-color: var(--luc-white);
+  margin-bottom: 24px;
+}
+
+.lucca-diferencial-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--luc-white);
+  font-size: 1.02rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.lucca-diferencial-footnote {
+  margin-top: auto;
+  padding-top: 30px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+}
+
+/* 5. PARCERIA / CONCEPT SECTION */
+.lucca-parceria-section {
+  position: relative;
+  min-height: 540px;
+  background-color: var(--luc-brown-deep);
+  background-image: url("/lucca/parceria_bg_clean.jpg");
+  background-size: cover;
+  background-position: center right;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.lucca-parceria-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30, 22, 14, 0.95) 0%,
+    rgba(30, 22, 14, 0.85) 45%,
+    rgba(30, 22, 14, 0.2) 80%,
+    transparent 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .lucca-parceria-overlay {
+    background: rgba(30, 22, 14, 0.88);
+  }
+}
+
+.lucca-parceria-content {
+  position: relative;
+  z-index: 10;
+  max-width: 650px;
+  color: var(--luc-white);
+}
+
+.lucca-parceria-title {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.lucca-parceria-body {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+/* 6. INFRAESTRUTURA & GALLERY SECTION */
+.lucca-infra-section {
+  background-color: var(--luc-sand-bg);
+  padding: 90px 0 70px;
+  text-align: center;
+}
+
+.lucca-infra-intro {
+  max-width: 920px;
+  margin: 28px auto 50px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--luc-text-muted);
+}
+
+/* CAROUSEL */
+.lucca-gallery-wrapper {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.lucca-gallery-viewport {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 480px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .lucca-gallery-viewport {
+    height: 300px;
+  }
+}
+
+.lucca-gallery-active-slide {
+  position: relative;
+  width: 870px;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(59, 45, 24, 0.2);
+  z-index: 5;
+  transition: transform 0.4s ease;
+}
+
+@media (max-width: 1024px) {
+  .lucca-gallery-active-slide {
+    width: 90%;
+  }
+}
+
+.lucca-gallery-side-slide {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 480px;
+  height: 80%;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0.65;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .lucca-gallery-side-slide {
+    display: none;
+  }
+}
+
+.lucca-gallery-side-slide.left {
+  left: calc(50% - 870px / 2 - 380px);
+}
+
+.lucca-gallery-side-slide.right {
+  right: calc(50% - 870px / 2 - 380px);
+}
+
+.lucca-gallery-side-slide:hover {
+  opacity: 0.85;
+}
+
+.lucca-gallery-side-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(59, 45, 24, 0.45);
+}
+
+.lucca-gallery-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--luc-brown-primary);
+  color: var(--luc-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.lucca-gallery-nav-btn:hover {
+  background-color: var(--luc-brown-dark);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.lucca-gallery-nav-btn.prev {
+  left: 20px;
+}
+
+.lucca-gallery-nav-btn.next {
+  right: 20px;
+}
+
+@media (min-width: 1025px) {
+  .lucca-gallery-nav-btn.prev {
+    left: calc(50% - 870px / 2 - 30px);
+  }
+  .lucca-gallery-nav-btn.next {
+    right: calc(50% - 870px / 2 - 30px);
+  }
+}
+
+.lucca-gallery-zoom-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: rgba(59, 45, 24, 0.8);
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.lucca-gallery-zoom-btn:hover {
+  background-color: var(--luc-brown-primary);
+}
+
+.lucca-gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.lucca-gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--luc-sand-border);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.lucca-gallery-dot.active {
+  background-color: var(--luc-brown-accent);
+  transform: scale(1.3);
+}
+
+/* LIGHTBOX */
+.lucca-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(20, 15, 10, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lucca-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--luc-white);
+  transition: transform 0.2s;
+}
+
+.lucca-lightbox-close:hover {
+  transform: scale(1.15);
+}
+
+.lucca-lightbox-content {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lucca-lightbox-caption {
+  color: var(--luc-white);
+  text-align: center;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+/* 7. FICHA TÉCNICA SECTION */
+.lucca-specs-section {
+  position: relative;
+  min-height: 600px;
+  background-color: var(--luc-brown-deep);
+  background-image: url("/lucca/specs_bg_clean.jpg");
+  background-size: cover;
+  background-position: center top;
+  padding: 90px 0 100px;
+  color: var(--luc-white);
+}
+
+.lucca-specs-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 18, 12, 0.88) 0%,
+    rgba(25, 18, 12, 0.72) 40%,
+    rgba(25, 18, 12, 0.88) 100%
+  );
+}
+
+.lucca-specs-content {
+  position: relative;
+  z-index: 10;
+}
+
+.lucca-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 50px;
+}
+
+@media (max-width: 960px) {
+  .lucca-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+.lucca-spec-col-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--luc-white);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.lucca-spec-col-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 2px;
+  background-color: var(--luc-gold);
+}
+
+.lucca-spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lucca-spec-list li {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  padding-left: 18px;
+  position: relative;
+}
+
+.lucca-spec-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--luc-gold);
+  font-weight: bold;
+}
+
+/* 8. LOCALIZAÇÃO SECTION */
+.lucca-location-section {
+  background-color: var(--luc-sand-bg);
+  padding: 90px 0;
+  text-align: center;
+}
+
+.lucca-location-intro {
+  max-width: 920px;
+  margin: 24px auto 44px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--luc-text-muted);
+}
+
+.lucca-map-card {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(59, 45, 24, 0.16);
+  border: 1px solid var(--luc-sand-border);
+}
+
+/* CTA RIBBON SECTION */
+.lucca-cta-ribbon-section {
+  margin-top: 40px;
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
+.lucca-cta-ribbon {
+  background-color: var(--luc-white);
+  border: 2px solid var(--luc-brown-accent);
+  border-radius: 8px;
+  padding: 18px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(59, 45, 24, 0.08);
+}
+
+.lucca-cta-ribbon:hover {
+  background-color: #fdfaf6;
+  border-color: var(--luc-brown-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(59, 45, 24, 0.14);
+}
+
+.lucca-cta-ribbon-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.lucca-cta-ribbon-text {
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--luc-brown-dark);
+}
+
+/* MAP MODAL */
+.lucca-map-modal-card {
+  background-color: var(--luc-white);
+  border-radius: 12px;
+  max-width: 960px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lucca-map-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 30px;
+  background-color: var(--luc-sand-card);
+  border-bottom: 1px solid var(--luc-sand-border);
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .lucca-map-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+}
+
+.lucca-map-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: var(--luc-white);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.lucca-map-whatsapp-btn:hover {
+  opacity: 0.9;
+}
+
+.lucca-map-modal-body {
+  padding: 24px 30px 30px;
+}
+
+@media (max-width: 640px) {
+  .lucca-map-modal-body {
+    padding: 16px;
+  }
+}
+
+.lucca-map-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--luc-text-dark);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.lucca-map-modal-footer {
+  margin-top: 20px;
+}
+
+/* 9. BOTTOM CONVERSION SECTION */
+.lucca-bottom-section {
+  position: relative;
+  min-height: 620px;
+  background-color: var(--luc-brown-deep);
+  background-image: url("/lucca/cta_bottom_clean.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.lucca-bottom-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(25, 18, 12, 0.94) 0%,
+    rgba(25, 18, 12, 0.82) 48%,
+    rgba(25, 18, 12, 0.4) 100%
+  );
+}
+
+@media (max-width: 960px) {
+  .lucca-bottom-overlay {
+    background: rgba(25, 18, 12, 0.88);
+  }
+}
+
+.lucca-bottom-content {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 50px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .lucca-bottom-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.lucca-bottom-cta-heading {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--luc-white);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.lucca-bottom-cta-sub {
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--luc-white);
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+.lucca-bottom-badge {
+  display: inline-block;
+  margin-top: 24px;
+  background-color: var(--luc-brown-accent);
+  color: var(--luc-white);
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* 10. FOOTER */
+.lucca-footer {
+  background-color: var(--luc-white);
+  color: var(--luc-brown-primary);
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-top: 1px solid var(--luc-sand-border);
+}
+
+/* 11. FLOATING WHATSAPP */
+.lucca-floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lucca-floating-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
