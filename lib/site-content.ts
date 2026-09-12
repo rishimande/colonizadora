@@ -40,7 +40,7 @@ export const siteContent = {
       summary: "Loteamento comercial e industrial. O endereço certo para seu negócio.",
       image: "/assets/newClaudinoFrancio.jpeg",
       accent: "lime",
-      href: "https://colonizadorafeliz.com.br/claudino-one-page/",
+      href: "/claudino-one-page",
     },
   ] satisfies ProjectCard[],
   video: {

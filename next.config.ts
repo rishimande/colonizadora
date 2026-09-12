@@ -17,6 +17,16 @@ const nextConfig: NextConfig = {
         destination: "/arboreto-one-page",
         permanent: false,
       },
+      {
+        source: "/claudino",
+        destination: "/claudino-one-page",
+        permanent: false,
+      },
+      {
+        source: "/claudino-francio",
+        destination: "/claudino-one-page",
+        permanent: false,
+      },
     ];
   },
 };
