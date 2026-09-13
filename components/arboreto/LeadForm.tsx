@@ -44,20 +44,21 @@ export function LeadForm({
     setError("");
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 600));
+      await new Promise((resolve) => setTimeout(resolve, 400));
 
-      const text = encodeURIComponent(
+      const subject = encodeURIComponent("Agendamento de Visita - Arboreto Eco Ville");
+      const body = encodeURIComponent(
         `Olá! Gostaria de saber mais sobre o Arboreto Eco Ville.\n\nNome: ${formData.name}\nE-mail: ${formData.email}\nTelefone: ${formData.phone}\nOrigem: Landing Page Arboreto (${sourceSection})`
       );
-      const whatsappUrl = `https://wa.me/556635456500?text=${text}`;
+      const mailtoUrl = `mailto:colfeliz_contratos@grupocfrancio.com.br?subject=${subject}&body=${body}`;
 
       setIsSuccess(true);
 
       setTimeout(() => {
-        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-      }, 1000);
+        window.location.href = mailtoUrl;
+      }, 600);
     } catch {
-      setError("Ocorreu um erro ao enviar seus dados. Tente novamente ou entre em contato pelo WhatsApp.");
+      setError("Ocorreu um erro ao processar seus dados. Tente novamente ou envie um e-mail para colfeliz_contratos@grupocfrancio.com.br.");
     } finally {
       setIsSubmitting(false);
     }
