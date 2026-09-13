@@ -9,8 +9,18 @@ interface VideoModalProps {
   posterSrc?: string;
 }
 
+function getEmbedUrl(url: string): string {
+  const match = url.match(
+    /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/
+  );
+  if (match) {
+    return `https://www.youtube.com/embed/${match[1]}?autoplay=1&rel=0`;
+  }
+  return url;
+}
+
 export function VideoModal({
-  videoUrl = "https://www.youtube.com/embed/1Oo-VIN0UaY?autoplay=1&rel=0",
+  videoUrl = "https://www.youtube.com/embed/3wHXjXhy3Yo?autoplay=1&rel=0",
   posterSrc = "/arboreto/video_thumb.jpg",
 }: VideoModalProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +88,7 @@ export function VideoModal({
           >
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-2xl bg-black">
               <iframe
-                src={videoUrl}
+                src={getEmbedUrl(videoUrl)}
                 title="Vídeo Institucional Arboreto Eco Ville"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

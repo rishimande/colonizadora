@@ -771,6 +771,11 @@
   font-weight: 500;
 }
 
+.lucca-video-modal-content {
+  position: relative;
+  width: min(960px, 95vw);
+}
+
 /* 7. FICHA TÉCNICA SECTION */
 .lucca-specs-section {
   position: relative;
