@@ -26,21 +26,6 @@ const galleryItems: GalleryItem[] = [
     alt: "Infraestrutura viária planejada para tráfego pesado de cargas",
     caption: "Estrutura viária projetada especialmente para o tráfego de carretas e bitrens",
   },
-  {
-    src: "/claudino/gallery_4.jpg",
-    alt: "Empreendimentos e galpões industriais já instalados na região",
-    caption: "Polo comercial e industrial consolidado ao lado da BR-163 e MT-242",
-  },
-  {
-    src: "/claudino/gallery_5.jpg",
-    alt: "Perspectiva conceitual de galpões e centros de distribuição modernos",
-    caption: "Projetado para indústrias, centros logísticos e distribuidoras de grande porte",
-  },
-  {
-    src: "/claudino/gallery_6.jpg",
-    alt: "Boulevard empresarial com redes subterrâneas e sinalização completa",
-    caption: "Redes completas de iluminação em LED, água tratada, drenagem e esgotamento",
-  },
 ];
 
 export function GalleryCarousel() {
