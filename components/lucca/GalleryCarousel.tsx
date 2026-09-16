@@ -13,33 +13,43 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     src: "/lucca/gallery_1.jpg",
-    alt: "Living e sala de estar decorada do Lucca Residencial",
-    caption: "Living amplo e integrado com acabamento premium e iluminação planejada",
+    alt: "Living e sala de jantar integrados do Lucca Residencial",
+    caption: "Living e sala de jantar amplos com acabamento premium e iluminação planejada",
   },
   {
     src: "/lucca/gallery_2.jpg",
-    alt: "Varanda gourmet com churrasqueira do Lucca Residencial",
-    caption: "Varanda gourmet privativa com bancada de granito e churrasqueira",
+    alt: "Varanda gourmet privativa com churrasqueira do Lucca Residencial",
+    caption: "Varanda gourmet privativa com bancada de granito, churrasqueira e vista aberta",
   },
   {
     src: "/lucca/gallery_3.jpg",
-    alt: "Piscina e deck molhado do Lucca Residencial",
-    caption: "Complexo aquático com piscina adulto de 15m e piscina infantil",
+    alt: "Complexo aquático e pavilhão de lazer do Lucca Residencial",
+    caption: "Complexo aquático com piscina adulto de 15m, piscina infantil e academia integrada",
   },
   {
     src: "/lucca/gallery_4.jpg",
-    alt: "Suíte máster com marcenaria planejada do Lucca Residencial",
-    caption: "Suíte confortável com acabamentos sofisticados e espaço otimizado",
+    alt: "Suíte máster decorada com iluminação de destaque do Lucca Residencial",
+    caption: "Suíte máster confortável com acabamentos sofisticados e marcenaria planejada",
   },
   {
     src: "/lucca/gallery_5.jpg",
     alt: "Espaço gourmet climatizado integrado do Lucca Residencial",
-    caption: "3 espaços gourmet entregues mobiliados com móveis Todeschini",
+    caption: "Espaços gourmet entregues mobiliados com móveis Todeschini e climatização",
   },
   {
     src: "/lucca/gallery_6.jpg",
-    alt: "Área externa de lazer com espreguiçadeiras e arquitetura contemporânea",
-    caption: "Áreas comuns modernas, adaptadas para PNE's e prontas para desfrutar",
+    alt: "Cozinha moderna com móveis planejados do Lucca Residencial",
+    caption: "Cozinha integrada com bancada em granito, cooktop e armários sob medida",
+  },
+  {
+    src: "/lucca/gallery_7.jpg",
+    alt: "Lounge gourmet integrado à piscina do Lucca Residencial",
+    caption: "Área de convivência externa sob pergolado com acesso direto à piscina",
+  },
+  {
+    src: "/lucca/gallery_8.jpg",
+    alt: "Sala de TV e estar com nichos iluminados do Lucca Residencial",
+    caption: "Sala de estar e home theater com painel de TV e nichos com luz indireta",
   },
 ];
 
