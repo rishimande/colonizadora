@@ -119,12 +119,20 @@
 }
 
 .arboreto-hero-logo {
-  max-width: 380px;
+  max-width: 260px;
   width: 100%;
   height: auto;
-  margin-bottom: 36px;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35));
+  margin-bottom: 24px;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
 }
+
+@media (max-width: 640px) {
+  .arboreto-hero-logo {
+    max-width: 200px;
+    margin-bottom: 18px;
+  }
+}
+
 
 .arboreto-hero-tagline {
   color: var(--arb-white);
