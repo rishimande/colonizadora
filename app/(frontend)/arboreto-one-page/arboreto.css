@@ -349,6 +349,13 @@
   color: var(--arb-white);
 }
 
+.arboreto-concept-section .arboreto-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
 .arboreto-concept-overlay {
   position: absolute;
   inset: 0;
@@ -410,9 +417,11 @@
   text-align: center;
   font-size: 0.84rem;
   letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   text-transform: uppercase;
-  margin-top: 120px;
+  margin-top: auto;
+  padding-top: 60px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* 6. NUMBERS / METRICS SECTION */
@@ -468,8 +477,11 @@
 .arboreto-number-stripe strong {
   border-bottom: 2px solid rgba(255, 255, 255, 0.9);
   padding-bottom: 2px;
-  margin-right: 8px;
   font-weight: 800;
+}
+
+.arboreto-number-stripe strong:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* 7. CTA LOTS MAP RIBBON */

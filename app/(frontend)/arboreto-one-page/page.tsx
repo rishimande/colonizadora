@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arboreto Eco Ville | Colonizadora Feliz",
     description:
-      "Alguns lugares são feitos para morar, outros, para marcar presença. 319 terrenos exclusivos em Sorriso-MT.",
+      "Alguns lugares são feitos para morar, outros, para marcar presença. Terrenos exclusivos a partir de 525 m² em Sorriso-MT.",
     images: [
       {
         url: "/arboreto/hero_bg_clean.jpg",
@@ -116,7 +116,7 @@ export default function ArboretoPage() {
           <div className="arboreto-numbers-grid">
             <div className="arboreto-number-stripe">
               <span>
-                <strong>319</strong> TERRENOS NO TOTAL
+                LOTES A PARTIR DE <strong>525 M²</strong>
               </span>
             </div>
 

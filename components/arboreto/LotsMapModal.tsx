@@ -60,7 +60,7 @@ export function LotsMapModal() {
                   Masterplan & Mapa dos Lotes
                 </h3>
                 <p className="text-sm text-[#6e593c] mt-1">
-                  Arboreto Eco Ville — 319 terrenos exclusivos em Sorriso-MT
+                  Arboreto Eco Ville — Terrenos exclusivos a partir de 525 m² em Sorriso-MT
                 </p>
               </div>
               <a
@@ -92,9 +92,9 @@ export function LotsMapModal() {
               <div className="arboreto-map-modal-footer">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                   <div className="p-3 bg-[#f5f1ea] rounded-lg border border-[#e2d9ce]">
-                    <span className="block text-2xl font-bold text-[#685034]">319</span>
+                    <span className="block text-2xl font-bold text-[#685034]">A partir de 525 m²</span>
                     <span className="text-xs uppercase tracking-wider text-[#7a644c]">
-                      Terrenos no total
+                      Lotes exclusivos
                     </span>
                   </div>
                   <div className="p-3 bg-[#f5f1ea] rounded-lg border border-[#e2d9ce]">
