@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { X, MapPin, MessageSquare } from "lucide-react";
+import { X, MessageSquare } from "lucide-react";
 
 export function LotsMapModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,18 +75,15 @@ export function LotsMapModal() {
             </div>
 
             <div className="arboreto-map-modal-body">
-              <div className="relative w-full h-[55vh] rounded-lg overflow-hidden border border-[#d6cbbe]">
+              <div className="relative w-full h-[55vh] md:h-[65vh] rounded-lg overflow-hidden border border-[#d6cbbe] bg-[#fdfcf9]">
                 <Image
-                  src="/arboreto/sorriso_map.jpg"
-                  alt="Mapa e Implantação dos Lotes Arboreto Eco Ville"
+                  src="/arboreto/arboreto_masterplan.jpg"
+                  alt="Masterplan e Mapa dos Lotes Arboreto Eco Ville"
                   fill
-                  sizes="90vw"
-                  className="object-cover"
+                  sizes="95vw"
+                  className="object-contain"
+                  priority
                 />
-                <div className="arboreto-map-badge">
-                  <MapPin className="w-4 h-4 text-[#b4a06d]" />
-                  <span>Av. Blumenau, Sorriso-MT</span>
-                </div>
               </div>
 
               <div className="arboreto-map-modal-footer">
